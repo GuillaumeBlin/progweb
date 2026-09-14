@@ -1,0 +1,23 @@
+{  
+  "name": "Node JS Development with VNC Desktop",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y xvfb x11vnc tiled",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "updateContentCommand": "",
+  "customizations": {
+    "vscode": {
+      "extensions": ["mongodb.mongodb-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode" ]
+    }
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "desktop"
+    }
+  },
+  "remoteUser": "vscode"
+}
