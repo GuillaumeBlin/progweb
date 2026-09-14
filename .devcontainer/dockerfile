@@ -1,0 +1,4 @@
+FROM mcr.microsoft.com/devcontainers/javascript-node
+
+RUN useradd -m -s /bin/bash -G sudo vscode || true \
+    && echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
