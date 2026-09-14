@@ -1,10 +1,11 @@
 {  
   "name": "Node JS Development with VNC Desktop",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "build": {
+    "dockerfile": "dockerfile"
+  },
   "postCreateCommand": "",
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {
-      "containerUser": "node"
     }
   },
   "updateContentCommand": "",
@@ -19,6 +20,6 @@
       "label": "desktop"
     }
   },
-  "containerUser": "node",
-  "remoteUser": "node"
+  "containerUser": "vscode",
+  "remoteUser": "vscode"
 }
