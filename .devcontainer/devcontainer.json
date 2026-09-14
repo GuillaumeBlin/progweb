@@ -8,9 +8,7 @@
   "updateContentCommand": "",
   "customizations": {
     "vscode": {
-      "extensions": ["mongodb.mongodb-vscode",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode" ]
+      "extensions": []
     }
   },
   "forwardPorts": [6080],
