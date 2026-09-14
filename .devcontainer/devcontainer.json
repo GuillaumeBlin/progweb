@@ -1,9 +1,11 @@
 {  
   "name": "Node JS Development with VNC Desktop",
   "image": "mcr.microsoft.com/devcontainers/javascript-node",
-  "postCreateCommand": "",
+  "postCreateCommand": "&& sudo apt-get install -y xvfb x11vnc",
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "containerUser": "node"
+    }
   },
   "updateContentCommand": "",
   "customizations": {
