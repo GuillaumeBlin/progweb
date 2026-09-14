@@ -5,6 +5,18 @@
   },
   "postCreateCommand": "",
   "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "node",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/node:2": {
+			"version": "none"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
     "ghcr.io/devcontainers/features/desktop-lite:1": {
     }
   },
@@ -20,6 +32,5 @@
       "label": "desktop"
     }
   },
-  "containerUser": "vscode",
-  "remoteUser": "vscode"
+  "remoteUser": "root"
 }
