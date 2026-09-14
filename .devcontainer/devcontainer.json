@@ -7,7 +7,7 @@
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": "true",
-			"username": "node",
+			"username": "vscode",
 			"upgradePackages": "true"
 		},
 		"ghcr.io/devcontainers/features/node:2": {
@@ -32,5 +32,5 @@
       "label": "desktop"
     }
   },
-  "remoteUser": "root"
+  "remoteUser": "vscode"
 }
