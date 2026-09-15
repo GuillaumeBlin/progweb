@@ -17,7 +17,8 @@
             "version": "latest",
             "ppa": "false"
         },
-	  
+	  "ghcr.io/devcontainers-extra/features/mongodb-atlas-cli-homebrew:1":{
+	  },
     "ghcr.io/devcontainers/features/desktop-lite:1": {
     }
   },
