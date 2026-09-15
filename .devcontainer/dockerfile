@@ -26,6 +26,4 @@ RUN \
     && su ${USERNAME} -c "umask 0002 && npm install -g eslint http morgan pm2 mongoose" \
     && npm cache clean --force > /dev/null 2>&1
 
-RUN \
-    apt update \
-    && apt install mongodb
+
