@@ -26,4 +26,13 @@ RUN \
     && su ${USERNAME} -c "umask 0002 && npm install -g eslint http morgan pm2 mongoose" \
     && npm cache clean --force > /dev/null 2>&1
 
+RUN \
+    curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor \
+   && echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/debian bookworm/mongodb-org/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list\
+   && sudo apt-get update \
+   && sudo apt-get install -y mongodb-org
+
+
 
