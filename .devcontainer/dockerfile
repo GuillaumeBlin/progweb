@@ -23,5 +23,9 @@ RUN \
     && npm config -g set prefix ${NPM_GLOBAL} \
     && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
     # Install eslint
-    && su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
+    && su ${USERNAME} -c "umask 0002 && npm install -g eslint http morgan pm2 mongoose" \
     && npm cache clean --force > /dev/null 2>&1
+
+RUN \
+    apt update \
+    && apt install mongodb
