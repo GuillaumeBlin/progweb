@@ -17,6 +17,8 @@
             "version": "latest",
             "ppa": "false"
         },
+	  "ghcr.io/devcontainers-extra/features/mongosh-homebrew:1":{
+	  },
     "ghcr.io/devcontainers/features/desktop-lite:1": {
     }
   },
