@@ -13,11 +13,9 @@
 		"ghcr.io/devcontainers/features/node:2": {
 			"version": "none"
 		},
-		"ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
-        },
-	   "ghcr.io/devcontainers-extra/features/homebrew-package:1": {},
+	   "ghcr.io/devcontainers-extra/features/homebrew-package:1": {
+		   "package": ["mongodb-community@8.0"]
+	   },
     "ghcr.io/devcontainers/features/desktop-lite:1": {
     }
   },
