@@ -26,7 +26,7 @@
 	// "forwardPorts": [3000, 27017],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	 "postCreateCommand": "npm install express morgan mongoose jsonwebtoken bcryptjs swagger-jsdoc swagger-ui-express ejs",
+	 "postCreateCommand": "npm install express morgan mongoose jsonwebtoken bcryptjs swagger-jsdoc swagger-ui-express pm2 ejs",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
