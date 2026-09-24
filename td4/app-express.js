@@ -1,5 +1,4 @@
 import express from 'express';
-import ejs from 'ejs';
 
 const host = 'localhost';
 const port = 8080;
