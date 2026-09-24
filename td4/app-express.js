@@ -1,9 +1,12 @@
 import express from 'express';
+import ejs from 'ejs';
 
 const host = 'localhost';
 const port = 8080;
 
 const app = express();
+
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
     res.send('Hello !');
@@ -14,7 +17,7 @@ app.get('/home', function(req, res) {
 });
 
 app.get('/user/:uid', function(req, res) {
-  res.send('Bonjour ' + req.params.uid);
+  res.render('user', {uid: req.params.uid});
 });
 
 app.use(function(req, res){
