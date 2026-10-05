@@ -28,7 +28,7 @@
 	// "forwardPorts": [3000, 27017],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	 "postCreateCommand": "npm install express morgan mongoose jsonwebtoken bcryptjs swagger-jsdoc swagger-ui-express ejs && npm install -g nodemon",
+	 "postCreateCommand": "cd td4 && npm install && cd ../td5 && npm install && cd ../td6 && npm install",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
