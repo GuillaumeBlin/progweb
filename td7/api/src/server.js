@@ -1,13 +1,12 @@
 import express from 'express';
+import morgan from 'morgan'
+
 import connectDB from "./config/db.js";
 import routes from './routes/index.js';
 import swaggerJsDoc from 'swagger-jsdoc';
 import { serve, setup } from 'swagger-ui-express';
 
-process.loadEnvFile();
-
-const host = process.env.HOST || 'localhost';
-const port = process.env.PORT || 8080;
+const port = 80;
 
 
 const options = {
@@ -38,7 +37,7 @@ const options = {
         },
         servers: [
             {
-                url: `http://${host}:${port}/api`,
+                url: `http://localhost:80/api`,
                 description: 'Development server',
             },
         ],
@@ -49,6 +48,7 @@ const options = {
 
 
 const app = express();
+app.use(morgan('dev'))
 app.use(express.json());
 connectDB();
 
@@ -57,6 +57,10 @@ app.use('/docs', serve, setup(openapiSpecification));
 
 app.use('/api', routes);
 
-app.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+app.get('/', function(req, res) {
+    res.send('Hello !');
+});
+
+app.listen(port, () => {
+    console.log("Server is running");
 });
