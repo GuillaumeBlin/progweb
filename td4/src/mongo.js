@@ -19,6 +19,7 @@ async function main() {
         const db = client.db(DABASE_NAME);
         console.log("Successfully connected to MongoDB.");
         const contacts = db.collection(collection);
+        await client.connect();
         await printAllContacts(contacts);
     } catch (e) {
         console.error(e)
